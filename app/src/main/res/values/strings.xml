@@ -2,4 +2,6 @@
     <string name="app_name">BillSplit</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="person_selfie">Picture of person taking a selfie</string>
+    <string name="person_shape">Picture of person with shapes</string>
 </resources>
