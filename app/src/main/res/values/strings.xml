@@ -4,6 +4,7 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="person_selfie">Picture of person taking a selfie</string>
     <string name="person_shape">Picture of person with shapes</string>
+    <string name="person_reading">Picture of person reading</string>
     <string name="members_fragment">Members Fragment</string>
     <string name="receipt_fragmentt">Receipt Fragment</string>
     <string name="totals_fragment">Totals Fragment</string>

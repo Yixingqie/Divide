@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
       //  btnUpload = findViewById(R.id.btnUpload);
-        txtView = findViewById(R.id.txtView);
+        txtView = findViewById(R.id.receiptHeader);
         bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(),
                 R.drawable.ocr_sample);
 

@@ -8,14 +8,14 @@
     android:background="@color/lightBlue">
 
     <TextView
-        android:id="@+id/txtView"
+        android:id="@+id/receiptHeader"
         style="@style/Header.Text"
         android:layout_width="375dp"
         android:layout_height="180dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/header_background"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/receipt_header_background"
         android:inputType="textMultiLine"
         android:paddingTop="35dp"
         android:paddingLeft="15dp"
@@ -24,17 +24,19 @@
         android:text="Upload or take a pic of your receipt" />
 
     <ImageView
+        android:id="@+id/personSelfie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/person_selfie"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="170dp"
         android:contentDescription="@string/person_selfie" />
 
     <ImageView
+        android:id="@+id/personShapes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/person_shapes"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="170dp"
         android:layout_marginLeft="300dp"
         android:contentDescription="@string/person_shape" />
 
@@ -43,7 +45,7 @@
         style="@style/Button.Text"
         android:layout_width="345dp"
         android:layout_height="55dp"
-        android:layout_marginTop="345dp"
+        android:layout_marginTop="285dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_round_arrow_up"
@@ -59,7 +61,7 @@
         android:layout_width="345dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="365dp"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_camera"
         android:gravity="center"
