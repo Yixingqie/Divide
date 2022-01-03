@@ -45,7 +45,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ImageView imageview;
-    Button btnProcess;
+    Button btnUpload;
     TextView txtView;
     Bitmap bitmap;
    ArrayList<String> priceList =new ArrayList<String>();
@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnProcess = findViewById(R.id.btnProcess);
+        btnUpload = findViewById(R.id.btnUpload);
         txtView = findViewById(R.id.txtView);
         bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(),
                 R.drawable.ocr_sample);
 
-        btnProcess.setOnClickListener(new View.OnClickListener() {
+        btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CropImage.activity()
