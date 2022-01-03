@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:style="http://schemas.android.com/tools"
     app:cnb_unselectedColor="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/members_tab"
         android:title="Members"
+        style="@style/Tab.Text"
         android:icon="@drawable/ic_people"
         app:cnb_backgroundColor="@color/lightBlue"
         app:cnb_iconColor="@color/black"
@@ -14,6 +16,7 @@
     <item
         android:id="@+id/receipt_tab"
         android:title="Receipt"
+        style="@style/Tab.Text"
         android:icon="@drawable/ic_payments"
         app:cnb_backgroundColor="@color/lightBlue"
         app:cnb_iconColor="@color/black"
@@ -22,6 +25,7 @@
     <item
         android:id="@+id/totals_tab"
         android:title="Total"
+        style="@style/Tab.Text"
         android:icon="@drawable/ic_money"
         app:cnb_backgroundColor="@color/lightBlue"
         app:cnb_iconColor="@color/black"

@@ -5,7 +5,7 @@
         android:color="@color/darkBlue"/>
 
     <corners
-        android:topLeftRadius="24dp"
-        android:topRightRadius="24dp"/>
+        android:topLeftRadius="@dimen/button_radius"
+        android:topRightRadius="@dimen/button_radius"/>
 
 </shape>
