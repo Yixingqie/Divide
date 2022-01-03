@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/receiptHeader"
         style="@style/Header.Text"
-        android:layout_width="375dp"
+        android:layout_width="350dp"
         android:layout_height="180dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
@@ -18,8 +18,8 @@
         android:background="@drawable/receipt_header_background"
         android:inputType="textMultiLine"
         android:paddingTop="35dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textAlignment="center"
         android:text="Upload or take a pic of your receipt" />
 
@@ -43,7 +43,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnUpload"
         style="@style/Button.Text"
-        android:layout_width="345dp"
+        android:layout_width="330dp"
         android:layout_height="55dp"
         android:layout_marginTop="285dp"
         android:layout_centerHorizontal="true"
@@ -58,10 +58,10 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCamera"
         style="@style/Button.Text"
-        android:layout_width="345dp"
+        android:layout_width="330dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="365dp"
+        android:layout_marginTop="360dp"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_camera"
         android:gravity="center"
