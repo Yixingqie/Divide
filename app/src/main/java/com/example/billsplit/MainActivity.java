@@ -40,6 +40,7 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnProcess;
     TextView txtView;
     Bitmap bitmap;
+   ArrayList<String> priceList =new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,21 +97,44 @@ public class MainActivity extends AppCompatActivity {
             Frame frame = new Frame.Builder().setBitmap(bitmap).build();
             SparseArray items = txtRecognizer.detect(frame);
             StringBuilder strBuilder = new StringBuilder();
+            Log.e("Int ","size: "+items.size());
             for (int i = 0; i < items.size(); i++) {
                 TextBlock item = (TextBlock) items.valueAt(i);
                 strBuilder.append(item.getValue());
-                strBuilder.append("/");
+                strBuilder.append("\n / \n");
+                Log.e( "Value", item.getValue());
                 for (Text line : item.getComponents()) {
                     //extract scanned text lines here
-                    Log.v("lines", line.getValue());
+                    Log.e("lines", line.getValue());
+                    String strchck = line.getValue().toString();
+                    if(strchck.matches("(?:\\$)?\\d+(?:(\\.|\\s)\\d+)?"))
+                    {
+                        System.out.println("Price");
+                        priceList.add(strchck);
+                    }
+                    else
+                    {
+                        System.out.println("Label: " + strchck);
+                        if(Character.isDigit(strchck.charAt(0))){
+                            System.out.println("Quantity Available");
+                        }else{
+                            System.out.println("Quantity unavailable");
+                        }
+                    }
+                    for(int j = 0; j < line.getComponents().size(); j++){
+                        System.out.println(line.getComponents().get(j).getValue());
+                    }
                     for (Text element : line.getComponents()) {
                         //extract scanned text words here
-                        Log.v("element", element.getValue());
+                        Log.e("element", element.getValue());
 
                     }
                 }
             }
             txtView.setText(strBuilder.toString().substring(0, strBuilder.toString().length() - 1));
+            for(int i = 0; i < priceList.size(); i++){
+                System.out.println(priceList.get(i));
+            }
         }
     }
 

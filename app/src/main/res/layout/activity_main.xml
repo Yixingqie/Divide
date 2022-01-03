@@ -15,5 +15,5 @@
         android:layout_height="wrap_content"
         android:text="No Text"
         android:layout_gravity="center"
-        android:textSize="25sp" />
+        android:textSize="15sp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
