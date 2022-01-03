@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceiptFragment">
+    android:background="@color/lightBlue">
+
+    <TextView
+        android:id="@+id/txtView"
+        style="@style/Header.Text"
+        android:layout_width="375dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/header_background"
+        android:inputType="textMultiLine"
+        android:paddingTop="35dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textAlignment="center"
+        android:text="Upload or take a pic of your receipt" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/person_selfie"
+        android:layout_marginTop="220dp"
+        android:contentDescription="@string/person_selfie" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/person_shapes"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="300dp"
+        android:contentDescription="@string/person_shape" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpload"
+        style="@style/Button.Text"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="345dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/image_text_btn"
+        android:drawableLeft="@drawable/ic_round_arrow_up"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:textAlignment="center"
+        android:text="Upload" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCamera"
+        style="@style/Button.Text"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/image_text_btn"
+        android:drawableLeft="@drawable/ic_camera"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:textAlignment="center"
+        android:text="Camera" />
+
+</RelativeLayout>
