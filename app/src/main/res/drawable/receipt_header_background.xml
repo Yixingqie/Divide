@@ -6,12 +6,6 @@
         android:height="180dp"
         android:width="375dp" />
 
-    <corners
-        android:bottomLeftRadius="40dp"
-        android:bottomRightRadius="40dp"
-        android:topLeftRadius="40dp"
-        android:topRightRadius="40dp" />
-
     <stroke
         android:width="0.5dp"
         android:color="@color/darkBlue" />

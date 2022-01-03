@@ -10,34 +10,41 @@
     <TextView
         android:id="@+id/receiptHeader"
         style="@style/Header.Text"
-        android:layout_width="350dp"
-        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
         android:background="@drawable/receipt_header_background"
         android:inputType="textMultiLine"
-        android:paddingTop="35dp"
         android:paddingLeft="10dp"
+        android:paddingTop="45dp"
         android:paddingRight="10dp"
-        android:textAlignment="center"
-        android:text="Upload or take a pic of your receipt" />
+        android:text="Upload or take a pic of your receipt"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/ic_wave" />
 
     <ImageView
         android:id="@+id/personSelfie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/person_selfie"
-        android:layout_marginTop="170dp"
-        android:contentDescription="@string/person_selfie" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="152dp"
+        android:contentDescription="@string/person_selfie"
+        android:src="@drawable/person_selfie" />
 
     <ImageView
         android:id="@+id/personShapes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/person_shapes"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginLeft="276dp"
         android:contentDescription="@string/person_shape" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -45,15 +52,15 @@
         style="@style/Button.Text"
         android:layout_width="330dp"
         android:layout_height="55dp"
-        android:layout_marginTop="285dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_round_arrow_up"
         android:gravity="center"
         android:paddingLeft="100dp"
         android:paddingRight="100dp"
-        android:textAlignment="center"
-        android:text="Upload" />
+        android:text="Upload"
+        android:textAlignment="center" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCamera"
@@ -61,7 +68,7 @@
         android:layout_width="330dp"
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="415dp"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_camera"
         android:gravity="center"
