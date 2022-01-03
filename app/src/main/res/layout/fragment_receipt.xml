@@ -45,15 +45,15 @@
         style="@style/Button.Text"
         android:layout_width="330dp"
         android:layout_height="55dp"
-        android:layout_marginTop="285dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="285dp"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_round_arrow_up"
         android:gravity="center"
         android:paddingLeft="100dp"
         android:paddingRight="100dp"
-        android:textAlignment="center"
-        android:text="Upload" />
+        android:text="Upload"
+        android:textAlignment="center" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCamera"
