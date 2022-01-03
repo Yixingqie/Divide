@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TotalsFragment">
+    tools:context=".TotalsFragment"
+    android:background="@color/lightBlue">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment3" />
+        android:id="@+id/totalsSubheading"
+        style="@style/Subheading.Text"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/totals_text_background"
+        android:inputType="textMultiLine"
+        android:paddingTop="70dp"
+        android:text="Receipt Summary"
+        android:textAlignment="center" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/totalsText"
+        style="@style/Paragraph.Text"
+        android:layout_width="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginTop="210dp"
+        android:inputType="textMultiLine"
+        android:paddingTop="70dp"
+        android:paddingLeft="30dp"
+        android:text="list of summaries" />
+
+    <TextView
+        android:id="@+id/totalsHeader"
+        style="@style/Header.Text"
+        android:layout_width="375dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/totals_header_background"
+        android:inputType="textMultiLine"
+        android:paddingTop="5dp"
+        android:paddingLeft="130dp"
+        android:paddingRight="130dp"
+        android:textAlignment="center"
+        android:text="total: $" />
+
+    <ImageView
+        android:id="@+id/personReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="127dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/person_reading"
+        android:src="@drawable/person_reading" />
+
+
+</RelativeLayout>
+
