@@ -7,10 +7,10 @@
         android:width="375dp" />
 
     <corners
-        android:bottomLeftRadius="40dp"
-        android:bottomRightRadius="40dp"
-        android:topLeftRadius="40dp"
-        android:topRightRadius="40dp" />
+        android:bottomLeftRadius="@dimen/background_radius"
+        android:bottomRightRadius="@dimen/background_radius"
+        android:topLeftRadius="@dimen/background_radius"
+        android:topRightRadius="@dimen/background_radius" />
 
     <stroke
         android:width="0.5dp"
