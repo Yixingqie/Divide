@@ -2,6 +2,9 @@ package com.example.billsplit;
 
 import static android.R.*;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,10 +29,12 @@ import java.util.ArrayList;
  */
 public class SelectionFragment extends Fragment {
 
-    ArrayList<String> listItems=new ArrayList<String>();
+    static ArrayList<String> listItems=new ArrayList<String>();
+    static String checklist [] = {"a", "b", "c", "d"};
+    static boolean selected[];
 
     //DEFINING A STRING ADAPTER WHICH WILL HANDLE THE DATA OF THE LISTVIEW
-    ArrayAdapter<String> adapter;
+    static ArrayAdapter<String> adapter;
 
     //RECORDING HOW MANY TIMES THE BUTTON HAS BEEN CLICKED
     int clickCounter=0;
@@ -74,7 +79,7 @@ public class SelectionFragment extends Fragment {
         }
     }
     private Button btnAddUser;
-    private ListView listView;
+    private static ListView listView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,10 +88,12 @@ public class SelectionFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_selection, container, false);
         final View btnAddUser = view.findViewById(R.id.btnAddUser);
         listView = view.findViewById(R.id.list);
-        adapter=new ArrayAdapter<String>(getActivity(),
-                layout.simple_list_item_1,
-                listItems);
+//        adapter=new ArrayAdapter<String>(getActivity(),
+//                R.layout.member_item,
+//                listItems);
+        adapter = new ListViewAdapter(getActivity(), listItems);;
         listView.setAdapter(adapter);
+        selected = new boolean[checklist.length];
 
         btnAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +117,38 @@ public class SelectionFragment extends Fragment {
 
     public void addMember(String member) {
         listItems.add(member);
-        adapter.notifyDataSetChanged();
+        listView.setAdapter(adapter);    }
+
+    public static void removeMember(int i) {
+        listItems.remove(i);
+        listView.setAdapter(adapter);
+    }
+
+    public static void openCheckList(Context context, int i){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Select the foods you ate: ");
+        builder.setCancelable(false);
+        builder.setMultiChoiceItems(checklist, selected, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i, boolean b) {
+
+            }
+        });
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        builder.show();
     }
 }
