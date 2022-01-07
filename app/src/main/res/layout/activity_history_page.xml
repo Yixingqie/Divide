@@ -3,6 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/homeHeader"
+        style="@style/AppTitle.Text"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/home_header_background"
+        android:inputType="textMultiLine"
+        android:paddingLeft="60dp"
+        android:paddingTop="70dp"
+        android:paddingRight="10dp"
+        android:text="divide" />
+
+    <ImageView
+        android:id="@+id/personIcecream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/person_shape"
+        android:src="@drawable/person_icecream" />
+
     <ListView
         android:id="@+id/list"
         android:layout_above="@id/addButton"
