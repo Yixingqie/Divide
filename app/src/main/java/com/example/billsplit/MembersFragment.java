@@ -1,19 +1,29 @@
 package com.example.billsplit;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link MembersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MembersFragment extends Fragment {
+public class MembersFragment extends Fragment{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,10 +65,41 @@ public class MembersFragment extends Fragment {
         }
     }
 
+    private Context mContext;
+    private Activity mActivity;
+
+    private RelativeLayout mRelativeLayout;
+    private Button btnAddUser;
+
+    private PopupWindow mPopupWindow;
+    private TextView test2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_members, container, false);
+        final View view = inflater.inflate(R.layout.fragment_members, container, false);
+        final View btnAddUser = view.findViewById(R.id.btnAddUser);
+        test2 = (TextView) view.findViewById(R.id.test);
+
+        btnAddUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog();
+            }
+        });
+        return view;
     }
+
+    public void openDialog(){
+        Dialogue dialog = new Dialogue();
+        dialog.show(getChildFragmentManager(), "example dialog");
+        getChildFragmentManager().setFragmentResultListener("data", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                test2.setText(result.getString("d1"));
+            }
+        });
+
+    }
+
 }

@@ -23,6 +23,15 @@
         app:cnb_textColor="@color/black" />
 
     <item
+        android:id="@+id/selection_tab"
+        android:title="Selections"
+        style="@style/Tab.Text"
+        android:icon="@drawable/ic_payments"
+        app:cnb_backgroundColor="@color/lightBlue"
+        app:cnb_iconColor="@color/black"
+        app:cnb_textColor="@color/black" />
+
+    <item
         android:id="@+id/totals_tab"
         android:title="Total"
         style="@style/Tab.Text"

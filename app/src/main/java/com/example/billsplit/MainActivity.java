@@ -198,6 +198,9 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.totals_tab:
                                 fragment = new TotalsFragment();
                                 break;
+                            case R.id.selection_tab:
+                                fragment = new SelectionFragment();
+                                break;
                         }
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fragment_container,
