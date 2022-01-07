@@ -40,7 +40,7 @@ class ListViewAdapter extends ArrayAdapter<String> {
             Button delete = convertView.findViewById(R.id.remove);
 
             name.setText(list.get(position));
-           // TextView number = convertView.findViewById(R.id.number);
+            // TextView number = convertView.findViewById(R.id.number);
 
 //            number.setText(position + 1 + ".");
 //            name.setText(list.get(position));
@@ -50,7 +50,7 @@ class ListViewAdapter extends ArrayAdapter<String> {
             memberBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    SelectionFragment.openCheckList(context, position);
                 }
             });
             delete.setOnClickListener(new View.OnClickListener() {
