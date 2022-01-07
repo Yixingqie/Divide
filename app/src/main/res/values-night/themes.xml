@@ -2,16 +2,24 @@
     <!-- Base application theme. -->
     <style name="Theme.BillSplit" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/darkBlue</item>
+        <item name="colorPrimaryVariant">@color/darkBlue</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/darkBlue</item>
+        <item name="colorSecondaryVariant">@color/darkBlue</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    </style>
+
+    <style name="ThemeOverlay.Actionbar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" >
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 
     <style name="ThemeOverlay.BillSplit.FullscreenContainer" parent="">
