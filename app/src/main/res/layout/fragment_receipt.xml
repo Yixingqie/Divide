@@ -2,16 +2,24 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReceiptFragment">
     android:background="@color/lightBlue">
 
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/ic_wave" />
+
     <TextView
         android:id="@+id/receiptHeader"
         style="@style/Header.Text"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="160dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:background="@drawable/receipt_header_background"
@@ -22,30 +30,24 @@
         android:text="Upload or take a pic of your receipt"
         android:textAlignment="center" />
 
-    <ImageView
-        android:id="@+id/wave"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/ic_wave" />
-
-    <ImageView
-        android:id="@+id/personSelfie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="152dp"
-        android:contentDescription="@string/person_selfie"
-        android:src="@drawable/person_selfie" />
+<!--    TODO: Delete or replace this image -->
+<!--    <ImageView-->
+<!--        android:id="@+id/personSelfie"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="500dp"-->
+<!--        android:contentDescription="@string/person_selfie"-->
+<!--        android:rotation="12"-->
+<!--        android:src="@drawable/person_selfie" />-->
 
     <ImageView
         android:id="@+id/personShapes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/person_shapes"
-        android:layout_marginTop="157dp"
-        android:layout_marginLeft="276dp"
-        android:contentDescription="@string/person_shape" />
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="170dp"
+        android:contentDescription="@string/person_shape"
+        android:src="@drawable/person_shapes" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnUpload"
@@ -67,14 +69,13 @@
         style="@style/Button.Text"
         android:layout_width="330dp"
         android:layout_height="55dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="415dp"
+        android:layout_marginTop="420dp"
         android:background="@drawable/image_text_btn"
         android:drawableLeft="@drawable/ic_camera"
         android:gravity="center"
         android:paddingLeft="100dp"
         android:paddingRight="100dp"
-        android:textAlignment="center"
-        android:text="Camera" />
+        android:text="Camera"
+        android:textAlignment="center" />
 
 </RelativeLayout>
