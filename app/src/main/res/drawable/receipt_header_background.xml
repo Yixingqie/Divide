@@ -6,12 +6,6 @@
         android:height="180dp"
         android:width="375dp" />
 
-    <corners
-        android:bottomLeftRadius="@dimen/background_radius"
-        android:bottomRightRadius="@dimen/background_radius"
-        android:topLeftRadius="@dimen/background_radius"
-        android:topRightRadius="@dimen/background_radius" />
-
     <stroke
         android:width="0.5dp"
         android:color="@color/darkBlue" />
