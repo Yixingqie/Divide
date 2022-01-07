@@ -175,11 +175,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         chipNavigationBar = findViewById(R.id.bottom_nav_bar);
-        chipNavigationBar.setItemSelected(R.id.members_tab,
+        chipNavigationBar.setItemSelected(R.id.receipt_tab,
                 true);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container,
-                        new MembersFragment()).commit();
+                        new ReceiptFragment()).commit();
         bottomMenu();
     }
     private void bottomMenu() {
@@ -189,18 +189,16 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemSelected(int i) {
                         Fragment fragment = null;
                         switch (i){
-                            case R.id.members_tab:
-                                fragment = new MembersFragment();
-                                break;
                             case R.id.receipt_tab:
                                 fragment = new ReceiptFragment();
-                                break;
-                            case R.id.totals_tab:
-                                fragment = new TotalsFragment();
                                 break;
                             case R.id.selection_tab:
                                 fragment = new SelectionFragment();
                                 break;
+                            case R.id.totals_tab:
+                                fragment = new TotalsFragment();
+                                break;
+
                         }
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fragment_container,
