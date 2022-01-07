@@ -5,15 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/members_tab"
-        android:title="Members"
-        style="@style/Tab.Text"
-        android:icon="@drawable/ic_people"
-        app:cnb_backgroundColor="@color/lightBlue"
-        app:cnb_iconColor="@color/black"
-        app:cnb_textColor="@color/black" />
-
-    <item
         android:id="@+id/receipt_tab"
         android:title="Receipt"
         style="@style/Tab.Text"
